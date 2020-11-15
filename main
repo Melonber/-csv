@@ -1,0 +1,12 @@
+import csv
+
+with open("table_1.csv", newline='', ) as csvfile:
+    reader = csv.DictReader(csvfile, delimiter=";")
+    for row in reader:
+        print(row['full_name'], '|', row['salary'], row['kpi'])
+
+with open("new_file.csv", 'w', newline='', ) as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["row 1 el 1", "row 1 el 2", "row 1 el 3"])
+    writer.writerow(["row 1 el 1", "row 1 el 2", "row 1 el 3"])
+    writer.writerow(["row 1 el 1", "row 1 el 2", "row 1 el 3"])
